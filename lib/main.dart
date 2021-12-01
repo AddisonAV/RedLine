@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
       ),
-      home: const MyHomePage(title: 'Zap vermelho'),
+      home: const MyHomePage(title: 'Zap Vermelho'),
     );
   }
 }
@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'You have been a dumbass for:',
             ),
             Text(
               '$_counter',
