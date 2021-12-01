@@ -16,4 +16,4 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 # Created
-Created by Addison, João Paulo e Uarlley
+Created by Addison, João Paulo and Uarlley
