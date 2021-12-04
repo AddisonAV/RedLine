@@ -1,56 +1,54 @@
 import 'package:flutter/material.dart';
+import 'package:redline/pages/home/view/chat_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
-  _HomePageState createState() => new _HomePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
-    // for initializin after
-    late TabController _tabController;
+class _HomePageState extends State<HomePage>
+    with SingleTickerProviderStateMixin {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
 
-    @override
-    void initState() {
-        super.initState();
-        _tabController = new TabController(length: 4, vsync: this, initialIndex: 1);
-    }
-
-    @override
-    Widget build(BuildContext context) { 
-        return Scaffold(
-            appBar: AppBar(
-
-            leading: Builder(builder: (BuildContext context){
-                return IconButton(
-                    icon: const Icon(Icons.menu),
-                    onPressed: () {Scaffold.of(context).openDrawer();},
-                    tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-                );
+          // leading is the right side of the title
+          leading: Builder(
+            builder: (BuildContext context) {
+              return IconButton(
+                icon: const Icon(Icons.menu),
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
+                tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+              );
             },
-            ),
-           
+          ),
 
-            title: Text(
-                'RedLine',
-                textAlign: TextAlign.center,
-            ),
-            elevation: 0.7,
+          // title is in between leading and actions
+          title: const Text(
+            'RedLine',
+            textAlign: TextAlign.center,
+          ),
+          elevation: 0.7,
 
-            actions: <Widget>[
-                Padding(
-                    padding: EdgeInsets.only(right: 20.0),
-                    child: GestureDetector(
-                        onTap: () {},
-                        child: Icon(
-                            Icons.search,
-                            size: 26.0,
-                        ),
-                    )
-                ),
-            ]
-            
+          // actions, left side of the title
+          actions: <Widget>[
+            Padding(
+                padding: const EdgeInsets.only(right: 20.0),
+                child: GestureDetector(
+                  onTap: () => {
+                    // do action when clicked on the search icon
+                  },
+                  child: const Icon(
+                    Icons.search,
+                    size: 26.0,
+                  ),
+                )),
+          ]
 
-            /* PREVIOUS TAB BAR IMPLEMENTATION
+          /* PREVIOUS TAB BAR IMPLEMENTATION, can be used for something else.
             bottom: new TabBar(
                 controller: _tabController,
                 indicatorColor: Colors.grey,
@@ -62,19 +60,24 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                 ]
             ),
             */
-            // TOP WIDGETS
-            
-            ),
-            body: new Container(),
-        
-            floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+          // TOP WIDGETS
 
-            floatingActionButton: new FloatingActionButton(
-                backgroundColor: Colors.redAccent,
-                child: new Icon(Icons.message, color: Colors.deepPurple,),
-                onPressed: () => print("Messages"),
-                elevation: 20,
-            ),
-        );
-    }
+          ),
+      
+      body: Center(
+        child: ChatPage(),
+      ),
+
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.redAccent,
+        child: const Icon(
+          Icons.message,
+          color: Colors.deepPurple,
+        ),
+        onPressed: () => {},
+        elevation: 0.5,
+      ),
+    );
+  }
 }

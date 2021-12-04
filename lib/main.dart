@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
         secondaryHeaderColor: Colors.red,
         primarySwatch: Colors.red,
       ),
-      home: new HomePage(),
+      home: HomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
