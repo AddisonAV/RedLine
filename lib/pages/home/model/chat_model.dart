@@ -1,4 +1,4 @@
-﻿import 'dart:core';
+import 'dart:core';
 
 class ChatModel {
   final String name;
@@ -17,7 +17,7 @@ class ChatModel {
 List<ChatModel> dummyData = [
   ChatModel(
       name: "Oberlan",
-      message: "Rapaz, vc n sabe o que o joao paula aprontou dessa vez, já tem 5 dias que pedi pra ele fazer a atividade e ele n entregou ate agr",
+      message: "Rapaz, vc n sabe o que o joao paulo aprontou dessa vez, já tem 5 dias que pedi pra ele fazer a atividade e ele n entregou ate agr",
       time: "14:23",
       avatarUrl: "https://i.imgur.com/TgrTUZy.jpg"
   ),
