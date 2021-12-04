@@ -44,6 +44,7 @@ class ChatPageState extends State<ChatPage>{
               padding: const EdgeInsets.only(top: 5.0),
               child: Text(
                 dummyData[i].message,
+                //overflow: TextOverflow.ellipsis,  REMOVE THIS COMMENT
                 style: TextStyle(color: Colors.grey, fontSize: 15.0),
               ),
             ),

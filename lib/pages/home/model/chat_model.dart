@@ -16,21 +16,15 @@ class ChatModel {
 
 List<ChatModel> dummyData = [
   ChatModel(
-    name: "Obiwan",
-    message: "Hello young padawan!",
-    time: "14:20",
-    avatarUrl: "https://i.imgur.com/TgrTUZy.jpg"
-  ),
-  ChatModel(
-      name: "Ken",
-      message: "Did u know!",
-      time: "14:21",
+      name: "Oberlan",
+      message: "Rapaz, vc n sabe o que o joao paula aprontou dessa vez, já tem 5 dias que pedi pra ele fazer a atividade e ele n entregou ate agr",
+      time: "14:23",
       avatarUrl: "https://i.imgur.com/TgrTUZy.jpg"
   ),
   ChatModel(
-      name: "Nobi",
-      message: "This was your father's AK!",
-      time: "14:22",
+      name: "Oberlan",
+      message: "Cara, outro, o Warlley fica insistindo em receber por duas monitorias e eu cansei de falar que n vou dar pra ele.",
+      time: "14:23",
       avatarUrl: "https://i.imgur.com/TgrTUZy.jpg"
   )
 ];
