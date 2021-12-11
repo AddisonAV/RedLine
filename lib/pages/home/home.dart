@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:redline/pages/home/model/conversation_model.dart';
 import 'package:redline/pages/home/view/chat_page.dart';
+import 'package:redline/pages/home/view/conversation_page.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -63,11 +67,23 @@ class _HomePageState extends State<HomePage>
           // TOP WIDGETS
 
           ),
-      
-      body: Center(
+      /*body: const Center(
         child: ChatPage(),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.redAccent,
+        child: const Icon(
+          Icons.message,
+          color: Colors.deepPurple,
+        ),
+        onPressed: () => {},
+        elevation: 0.5,
+      ),*/
 
+      body: const Center(
+        child: ConversationPage(),
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.redAccent,

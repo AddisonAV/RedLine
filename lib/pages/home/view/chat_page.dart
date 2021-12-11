@@ -2,21 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:redline/pages/home/model/chat_model.dart';
 
 class ChatPage extends StatefulWidget {
+  const ChatPage({Key? key}) : super(key: key);
+
   @override
   ChatPageState createState() {
     return ChatPageState();
   }
 }
 
-class ChatPageState extends State<ChatPage>{
-  
+class ChatPageState extends State<ChatPage> {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: dummyData.length,
       itemBuilder: (context, i) => Column(
         children: <Widget>[
-          Divider(
+          const Divider(
             height: 10.0,
           ),
           ListTile(
@@ -28,15 +29,12 @@ class ChatPageState extends State<ChatPage>{
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text(
-                  dummyData[i].name, 
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold
-                  )
-                ),
+                Text(dummyData[i].name,
+                    style: const TextStyle(fontWeight: FontWeight.bold)),
                 Text(
                   dummyData[i].time,
-                  style: TextStyle(color: Colors.grey, fontSize: 14.0),
+                  textAlign: TextAlign.right,
+                  style: const TextStyle(color: Colors.grey, fontSize: 14.0),
                 )
               ],
             ),
@@ -45,7 +43,7 @@ class ChatPageState extends State<ChatPage>{
               child: Text(
                 dummyData[i].message,
                 //overflow: TextOverflow.ellipsis,  REMOVE THIS COMMENT
-                style: TextStyle(color: Colors.grey, fontSize: 15.0),
+                style: const TextStyle(color: Colors.grey, fontSize: 15.0),
               ),
             ),
           )
@@ -53,6 +51,4 @@ class ChatPageState extends State<ChatPage>{
       ),
     );
   }
-
- 
 }
