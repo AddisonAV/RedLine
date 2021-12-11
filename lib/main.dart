@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:redline/pages/home/home.dart';
+import 'package:redline/pages/home/view/conversation_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         secondaryHeaderColor: Colors.red,
         primarySwatch: Colors.red,
       ),
-      home: HomePage(),
+      home: const ConversationPage(),
       debugShowCheckedModeBanner: false,
     );
   }
